@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="purchaseorder">
+                <field id="enabled_for_all_customer_groups" translate="label" type="select" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled For All Customer Groups</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enabled_customer_groups" translate="label" type="multiselect" sortOrder="1010" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled Only For The Following Customer Groups</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                    <depends>
+                        <field id="enabled_for_all_customer_groups">0</field>
+                    </depends>
+                </field>
+                <field id="enabled_only_for_admin" translate="label" type="select" sortOrder="1020" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled Only For The Admin Area</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

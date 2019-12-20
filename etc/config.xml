@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <purchaseorder>
+                <enabled_for_all_customer_groups>1</enabled_for_all_customer_groups>
+                <enabled_customer_groups/>
+                <enabled_only_for_admin>0</enabled_only_for_admin>
+            </purchaseorder>
+        </payment>
+    </default>
+</config>

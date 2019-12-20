@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\OfflinePayments\Model\Purchaseorder">
+        <plugin name="customgento_invoice_customer_group_check" type="CustomGento\Invoice\Plugin\OfflinePayments\Model\Purchaseorder\AddCustomerGroupCheckPlugin"/>
+        <plugin name="customgento_invoice_admin_check" type="CustomGento\Invoice\Plugin\OfflinePayments\Model\Purchaseorder\AddAdminCheckPlugin"/>
+    </type>
+</config>
