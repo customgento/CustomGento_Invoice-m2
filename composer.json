@@ -11,7 +11,6 @@
         "magento/module-quote": "~101.1",
         "magento/module-store": "~101.0"
     },
-    "version": "1.0.0",
     "type": "magento2-module",
     "license": [
         "OSL-3.0"
