@@ -1,6 +1,6 @@
 {
     "name": "customgento/module-invoice-m2",
-    "description": "This extension extends the default Magento 2 purchase order payment method by a customer group and admin filter.",
+    "description": "This Magento 2 module extends the default purchase order payment method by a customer group and admin filter.",
     "require": {
         "php": "~7.2.0||~7.3.0||~7.4.0",
         "magento/framework": "~102.0||~103.0",
