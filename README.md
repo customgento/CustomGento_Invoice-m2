@@ -1,5 +1,5 @@
 # CustomGento_Invoice (Magento 2)
-This extension extends the default Magento 2 purchase order payment method by a customer group and admin filter.
+This Magento 2 module extends the default purchase order payment method by a customer group and admin filter. You can use it to allow the payment method only for specific customer groups or disable it in the checkout and use it only in the admin area.
 
 ## Description
 This extension for Magento 2 extends the default purchase order payment method by two new configuration options:
