@@ -48,4 +48,4 @@ If you have any issues with this extension, feel free to [open an issue on GitHu
 [Open Software License 3.0](https://opensource.org/licenses/OSL-3.0)
 
 ## Copyright
-(c) 2018-2020 CustomGento / Simon Sprankel
+&copy; 2018 - present CustomGento / Simon Sprankel
