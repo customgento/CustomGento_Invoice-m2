@@ -20,6 +20,9 @@ class AddCustomerGroupCheckPlugin
         $this->config = $config;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function afterIsAvailable(Purchaseorder $subject, bool $result, CartInterface $quote = null): bool
     {
         // if some other rule forbids this payment method, we forbid it as well
