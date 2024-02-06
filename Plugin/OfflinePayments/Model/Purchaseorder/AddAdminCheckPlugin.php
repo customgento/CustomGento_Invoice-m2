@@ -27,7 +27,7 @@ class AddAdminCheckPlugin
         $this->state  = $state;
     }
 
-/**
+    /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterIsAvailable(Purchaseorder $subject, bool $result): bool
