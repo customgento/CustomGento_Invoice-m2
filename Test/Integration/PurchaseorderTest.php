@@ -27,7 +27,7 @@ class PurchaseorderTest extends TestCase
      */
     private $quote;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->objectManager = Bootstrap::getObjectManager();
         $this->paymentMethod = $this->objectManager->get(Purchaseorder::class);

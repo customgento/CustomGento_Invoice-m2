@@ -27,6 +27,9 @@ class AddAdminCheckPlugin
         $this->state  = $state;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function afterIsAvailable(Purchaseorder $subject, bool $result): bool
     {
         // if some other rule forbids this payment method, we forbid it as well
