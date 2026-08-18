@@ -18,11 +18,19 @@ class Config
      */
     private $scopeConfig;
 
+    /**
+     * @param ScopeConfigInterface $scopeConfig
+     */
     public function __construct(ScopeConfigInterface $scopeConfig)
     {
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * Check whether the payment method is enabled for all customer groups.
+     *
+     * @return bool
+     */
     public function isEnabledForAllCustomerGroups(): bool
     {
         return (bool)$this->scopeConfig->getValue(
@@ -31,6 +39,11 @@ class Config
         );
     }
 
+    /**
+     * Get the IDs of the customer groups the payment method is enabled for.
+     *
+     * @return string[]
+     */
     public function getEnabledCustomerGroups(): array
     {
         $rawEnabledCustomerGroups = $this->scopeConfig->getValue(
@@ -38,13 +51,18 @@ class Config
             ScopeInterface::SCOPE_STORE
         );
 
-        if (!$rawEnabledCustomerGroups) {
+        if (!$rawEnabledCustomerGroups || !is_string($rawEnabledCustomerGroups)) {
             return [];
         }
 
         return explode(',', $rawEnabledCustomerGroups);
     }
 
+    /**
+     * Check whether the payment method is restricted to the admin area.
+     *
+     * @return bool
+     */
     public function isEnabledForAdminOnly(): bool
     {
         return (bool)$this->scopeConfig->getValue(

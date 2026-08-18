@@ -15,12 +15,22 @@ class AddCustomerGroupCheckPlugin
      */
     private $config;
 
+    /**
+     * @param Config $config
+     */
     public function __construct(Config $config)
     {
         $this->config = $config;
     }
 
     /**
+     * Restrict the purchase order payment method to the configured customer groups.
+     *
+     * @param Purchaseorder      $subject
+     * @param bool               $result
+     * @param CartInterface|null $quote
+     *
+     * @return bool
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterIsAvailable(Purchaseorder $subject, bool $result, ?CartInterface $quote = null): bool

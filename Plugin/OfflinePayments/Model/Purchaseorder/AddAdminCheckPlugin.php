@@ -7,6 +7,7 @@ namespace CustomGento\Invoice\Plugin\OfflinePayments\Model\Purchaseorder;
 use CustomGento\Invoice\Model\Config;
 use Magento\Framework\App\Area;
 use Magento\Framework\App\State;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\OfflinePayments\Model\Purchaseorder;
 
 class AddAdminCheckPlugin
@@ -21,6 +22,10 @@ class AddAdminCheckPlugin
      */
     private $state;
 
+    /**
+     * @param Config $config
+     * @param State  $state
+     */
     public function __construct(Config $config, State $state)
     {
         $this->config = $config;
@@ -28,6 +33,13 @@ class AddAdminCheckPlugin
     }
 
     /**
+     * Restrict the purchase order payment method to the admin area, if configured.
+     *
+     * @param Purchaseorder $subject
+     * @param bool          $result
+     *
+     * @return bool
+     * @throws LocalizedException
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterIsAvailable(Purchaseorder $subject, bool $result): bool
