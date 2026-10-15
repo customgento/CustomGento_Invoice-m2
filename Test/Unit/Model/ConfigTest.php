@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 class ConfigTest extends TestCase
 {
     /**
-     * @var ScopeConfigInterface|MockObject
+     * @var ScopeConfigInterface&MockObject
      */
     private $scopeConfig;
 
